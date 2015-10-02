@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'settings/change_locale'
+  get 'settings/change_locale/:locale' => 'settings#change_locale', as: :change_locale
 
   root 'pages#home'
 
