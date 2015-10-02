@@ -39,7 +39,7 @@ gem 'slim-rails'
 gem 'friendly_id'
 gem 'sweet-alert'
 gem 'sweet-alert-confirm'
-gem 'puma'
+gem "rack-timeout"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -63,3 +63,6 @@ group :development do
   gem 'quiet_assets'
   gem 'awesome_print'
 end
+
+gem 'puma'
+ruby "2.2.0"
