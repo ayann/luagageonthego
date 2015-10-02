@@ -1,0 +1,19 @@
+- messages ||= []
+- colors ||= []
+- flash.each do |name, message|
+  - colors << flash_class(name) rescue nil
+  - if message.present?
+    - if message.is_a?(Array)
+      - messages << message.join('<br>') rescue nil
+    - else
+      - messages << message rescue nil
+
+javascript:
+  jQuery(document).ready(function($) {
+    var messages = #{ raw messages.compact };
+    var colors = #{ raw colors };
+    
+    $.each(messages, function(index, message){  
+      Materialize.toast(message, 1600, colors[index])
+    }); 
+  });
