@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'settings/change_locale/:locale' => 'settings#change_locale', as: :change_locale
 
   root 'pages#home'
