@@ -13,4 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require materialize-sprockets
+//= require sweet-alert
+//= require sweet-alert-confirm
 //= require_tree .

@@ -39,6 +39,7 @@ gem 'slim-rails'
 gem 'friendly_id'
 gem 'sweet-alert'
 gem 'sweet-alert-confirm'
+gem 'materialize-sass'
 gem "rack-timeout"
 
 group :development, :test do
