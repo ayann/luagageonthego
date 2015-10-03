@@ -2,14 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
   get 'settings/change_locale/:locale' => 'settings#change_locale', as: :change_locale
 
-  # root 'pages#home'
-  # devise_scope :user do
-  #   root to: 'devise/sessions#new'
-  # end
-
   authenticated :user do
     devise_scope :user do
-      root to: "pages#home", as: "profile"
+      root to: "pages#home"
     end
   end
 
