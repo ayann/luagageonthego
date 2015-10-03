@@ -16,4 +16,5 @@
 //= require materialize-sprockets
 //= require sweet-alert
 //= require sweet-alert-confirm
+//= require init
 //= require_tree .

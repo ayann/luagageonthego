@@ -1,0 +1,37 @@
+.row.center-align.only_form
+  .col.s12.m4#session_form
+    .center-align
+      == image_tag('spider_logo.png', class: 'logo')
+      br
+      br
+      p.flow-text#logo_title == I18n.t('site.name')
+      p.flow-text#site_description == I18n.t('site.site_description')
+
+    == form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: 'col s12'}) do |f|
+      .row
+        / = devise_error_messages!
+        - @messages = to_flash resource.errors.full_messages, 'red'
+
+      .row
+        div[class="input-field col s12"]
+          == f.email_field :email, class: "validate", required: true
+          == f.label :email, autofocus: true, data: { error: "Invalide", success: "Valide" }
+
+      .row
+        div[class="input-field col s12"]
+          == f.password_field :password, class: "validate", required: true, pattern: ".{8,}", title: "8 caractères minimum", autocomplete: 'off'
+          == f.label :password, data: {error: "Invalide", success: "Valide" }
+
+      .row
+        div[class="input-field col s12"]
+          == f.password_field :password_confirmation, class: "validate", required: true, pattern: ".{8,}", title: "8 caractères minimum", autocomplete: 'off'
+          == f.label :password_confirmation, data: {error: "Invalide", success: "Valide" }
+
+      .row
+        div[class="input-field col s12 center-align"]
+          button class="btn-large waves-effect waves-light light-blue lighten-1" type="submit" name="action"
+            == t "pages.button.signup"
+            i.material-icons.right send
+        div[class="input-field col s12 center-align"]
+          == link_to t("pages.button.login"), new_session_path(resource_name)
+          br

@@ -1,0 +1,25 @@
+.row.valign.row_form_container.animated.fadeInUpBig
+  #session_form
+    .row
+      .col.s12
+        .center-align
+          == image_tag('logo.png', class: 'logo')
+          p.flow-text#site_description == I18n.t('site.site_description')
+          p.flow-text.no_mb == t("pages.#{controller_name}.#{action_name}")
+
+    == form_for(resource, as: resource_name, url: password_path(resource_name), html: {class: 'col s12'}) do |f|
+      .row
+        / = devise_error_messages!
+        - @messages = to_flash resource.errors.full_messages, 'red'
+
+      .row
+        div[class="input-field col s12"]
+          == f.email_field :email, class: "validate", required: true
+          == f.label :email, autofocus: true, data: { error: "Invalide", success: "Valide" }
+
+      .row
+        div[class="input-field col s12 center-align"]
+          button class="btn-large waves-effect waves-light light-blue lighten-1" type="submit" name="action"
+            == t('pages.button.send_password_instruction')
+            i.material-icons.right send
+        div[class="input-field col s12 center-align"]
