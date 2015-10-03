@@ -2,7 +2,22 @@ Rails.application.routes.draw do
   devise_for :users
   get 'settings/change_locale/:locale' => 'settings#change_locale', as: :change_locale
 
-  root 'pages#home'
+  # root 'pages#home'
+  # devise_scope :user do
+  #   root to: 'devise/sessions#new'
+  # end
+
+  authenticated :user do
+    devise_scope :user do
+      root to: "pages#home", as: "profile"
+    end
+  end
+
+  unauthenticated do
+    devise_scope :user do
+      root to: "devise/sessions#new", as: "unauthenticated"
+    end
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

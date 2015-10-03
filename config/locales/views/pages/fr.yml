@@ -1,0 +1,28 @@
+fr:
+  pages:
+    text:
+      forget_password: Mot de passe oublié
+    button:
+      login: Se connecter
+      signup: S'incricre
+      send_password_instruction: Changer le mot de passe
+    passwords:
+      new: Mot de passe oublié
+      label: Libellé du mot de passe
+
+  resource:
+    user:
+      role:
+        admin: Administrateur
+        employee: Employé
+
+    group:
+      new: Nouveau groupe
+      edit: Modifier le groupe
+      create: Créer le groupe
+
+    password:
+      new: Nouveau mot de passe
+      edit: Modifier le mot de passe
+      create: Créer le mot de passe
+      generate: Générer

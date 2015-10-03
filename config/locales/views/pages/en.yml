@@ -1,0 +1,28 @@
+en:
+  pages:
+    text:
+      forget_password: Forgot password ?
+    button:
+      login: login
+      signup: Signup
+      send_password_instruction: Change my password
+    passwords:
+      new: Forgot password
+      label: Label of passwords
+
+  resource:
+    user:
+      role:
+        admin: Administrator
+        employee: Employee
+
+    group:
+      new: New group
+      edit: Edit group
+      create: Create group
+
+    password:
+      new: New password
+      edit: Edit password
+      create: Create password
+      generate: Generate

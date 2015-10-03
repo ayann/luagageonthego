@@ -3,9 +3,6 @@
     .row
       .col.s12
         .center-align
-          == image_tag('logo.png', class: 'logo')
-          p.flow-text#site_description == I18n.t('site.site_description')
-
     == form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: 'col s12'}) do |f|
       .row
         div[class="input-field col s12"]
