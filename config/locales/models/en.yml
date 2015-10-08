@@ -1,0 +1,37 @@
+en:
+  activerecord:
+    models:
+      user:
+        one: User
+        other: Users
+    attributes:
+      defaults: &attr_defaults
+        id: Id
+        created_at: Created at
+        updated_at: Updated at
+      user:
+        <<: *attr_defaults
+        password: Password
+        password_confirmation: Password confirmation
+        email: Email
+        remember_me: Remember me
+        tmp_password: Temporary password
+        email: Email
+        encrypted_password: Encrypted password
+        reset_password_token: Password reset password token
+        reset_password_sent_at: Password reset password token sent at
+        remember_created_at: Registration Time
+        sign_in_count: Sign in count
+        current_connection_time: Current connection time
+        current_sign_in_at: Current sign in at
+        last_sign_in_at: Last sign in at
+        current_sign_in_ip: Current sign ip adress
+        last_sign_in_ip: last sign ip adress
+        confirmation_token: Confirmation token
+        confirmed_at: Confirmed at
+        confirmation_sent_at: Confirmation sent at
+        unconfirmed_email: Email unconfirmed
+        unlock_token: Unlock token
+        locked_at: Locked at
+        first_name: first name
+        last_name: Last name

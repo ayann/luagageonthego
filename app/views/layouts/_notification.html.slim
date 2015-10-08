@@ -13,7 +13,14 @@ javascript:
     var messages = #{ raw messages.compact };
     var colors = #{ raw colors };
     
-    $.each(messages, function(index, message){  
+    $.each(messages, function(index, message){
+      // var notification = new NotificationFx({
+      //   message: message,
+      //   layout: 'attached',
+      //   effect: 'bouncyflip',
+      //   type: colors[index],
+      // });
+      // notification.show()
       Materialize.toast(message, 1600, colors[index])
     }); 
   });
