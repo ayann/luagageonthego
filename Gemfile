@@ -67,4 +67,4 @@ group :development do
 end
 
 gem 'puma'
-ruby "2.2.0"
+ruby "2.2.2"
