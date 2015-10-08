@@ -1,40 +1,81 @@
 fr:
   activerecord:
+    errors:
+      format: "%{attribute} %{message}"
+      messages:
+        accepted: doit être accepté(e)
+        blank: doit être rempli(e)
+        present: doit être vide
+        confirmation: ne concorde pas avec %{attribute}
+        empty: doit être rempli(e)
+        equal_to: doit être égal à %{count}
+        even: doit être pair
+        exclusion: n'est pas disponible
+        greater_than: doit être supérieur à %{count}
+        greater_than_or_equal_to: doit être supérieur ou égal à %{count}
+        inclusion: n'est pas inclus(e) dans la liste
+        invalid: n'est pas valide
+        less_than: doit être inférieur à %{count}
+        less_than_or_equal_to: doit être inférieur ou égal à %{count}
+        not_a_number: n'est pas un nombre
+        not_an_integer: doit être un nombre entier
+        odd: doit être impair
+        record_invalid: 'La validation a échoué : %{errors}'
+        restrict_dependent_destroy:
+          one: 'Suppression impossible: un autre enregistrement est lié'
+          many: 'Suppression impossible: d''autres enregistrements sont liés'
+        taken: n'est pas disponible
+        too_long:
+          one: est trop long (pas plus d'un caractère)
+          other: est trop long (pas plus de %{count} caractères)
+        too_short:
+          one: est trop court (au moins un caractère)
+          other: est trop court (au moins %{count} caractères)
+        wrong_length:
+          one: ne fait pas la bonne longueur (doit comporter un seul caractère)
+          other: ne fait pas la bonne longueur (doit comporter %{count} caractères)
+        other_than: doit être différent de %{count}
+      template:
+        body: 'Veuillez vérifier les champs suivants : '
+        header:
+          one: 'Impossible d''enregistrer ce(tte) %{model} : 1 erreur'
+          other: 'Impossible d''enregistrer ce(tte) %{model} : %{count} erreurs'
+
     models:
       user:
         one: Utilisateur
         other: Utilisateurs
-    attributes:
-      defaults: &attr_defaults
-        id: Id
-        created_at: "Date de création"
-        updated_at: "Date de mise à jour"
-        encrypted_password: Mot de passe crypté
+      attributes:
+        defaults: &attr_defaults
+          id: Id
+          created_at: "Date de création"
+          updated_at: "Date de mise à jour"
+          encrypted_password: Mot de passe crypté
 
-      user:
-        <<: *attr_defaults
-        password: Mot de passe
-        email: Email
-        remember_me: Se souvenir de moi
-        password_confirmation: Confirmation du mot de passe
-        tmp_password: Mot de passe temporaire
-        email: Email
-        reset_password_token: Jeton de ré-initialisation
-        reset_password_sent_at: Date d'envoi du jeton de ré-initialisation
-        remember_created_at: Heure d'inscription
-        sign_in_count: Nombre de connexions
-        current_connection_time: Heure de la connexion actuelle
-        current_sign_in_at: Heure de connexion courante
-        last_sign_in_at: Heure de dernière connexion
-        current_sign_in_ip: Adresse de connexion courante
-        last_sign_in_ip: Adresse de dernière connexion
-        confirmation_token: Jeton de confirmation
-        confirmed_at: Heure de confirmation
-        confirmation_sent_at: Heure d'envoi de la confirmation
-        unconfirmed_email: Adresse email non-confirmée
-        unlock_token: Jeton de déblocage
-        locked_at: Heure de blocage
-        password: Mot de passe
-        password_confirmation: Confirmation du mot de passe
-        last_name: Prénom
-        first_name: Nom
+        user:
+          <<: *attr_defaults
+          password: Mot de passe
+          email: Email
+          remember_me: Se souvenir de moi
+          password_confirmation: Confirmation du mot de passe
+          tmp_password: Mot de passe temporaire
+          email: Email
+          reset_password_token: Jeton de ré-initialisation
+          reset_password_sent_at: Date d'envoi du jeton de ré-initialisation
+          remember_created_at: Heure d'inscription
+          sign_in_count: Nombre de connexions
+          current_connection_time: Heure de la connexion actuelle
+          current_sign_in_at: Heure de connexion courante
+          last_sign_in_at: Heure de dernière connexion
+          current_sign_in_ip: Adresse de connexion courante
+          last_sign_in_ip: Adresse de dernière connexion
+          confirmation_token: Jeton de confirmation
+          confirmed_at: Heure de confirmation
+          confirmation_sent_at: Heure d'envoi de la confirmation
+          unconfirmed_email: Adresse email non-confirmée
+          unlock_token: Jeton de déblocage
+          locked_at: Heure de blocage
+          password: Mot de passe
+          password_confirmation: Confirmation du mot de passe
+          last_name: Prénom
+          first_name: Nom
