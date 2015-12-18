@@ -1,5 +1,5 @@
 GIT
-  remote: git@github.com:CapSens/activeadmin-lte.git
+  remote: https://github.com/CapSens/activeadmin-lte
   revision: 54de57a9a5a00977f868dd71cee1b003fb966b26
   branch: Armand
   specs:

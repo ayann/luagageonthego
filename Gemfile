@@ -44,7 +44,7 @@ gem 'materialize-sass'
 gem "rack-timeout"
 
 gem 'activeadmin', '~> 1.0.0.pre2'
-gem 'activeadmin-lte', git: 'git@github.com:CapSens/activeadmin-lte.git', branch: 'Armand'
+gem 'activeadmin-lte', git: 'https://github.com/CapSens/activeadmin-lte', branch: 'Armand'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
