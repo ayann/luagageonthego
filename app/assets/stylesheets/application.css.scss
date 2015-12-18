@@ -1,9 +1,11 @@
 /*
  *= require_tree .
  *= require_self
+ *= stub active_admin
  *= require sweet-alert
  *= require notification/ns-default
  *= require notification/ns-style-attached
  */
+
  @import "materialize";
 .toast{ height: auto; }
